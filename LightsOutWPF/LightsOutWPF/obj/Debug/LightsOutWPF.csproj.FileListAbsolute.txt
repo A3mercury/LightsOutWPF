@@ -1,0 +1,14 @@
+c:\users\mercury\documents\visual studio 2013\Projects\LightsOutWPF\LightsOutWPF\bin\Debug\LightsOutWPF.exe.config
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\bin\Debug\LightsOutWPF.exe.config
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\bin\Debug\LightsOutWPF.exe
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\bin\Debug\LightsOutWPF.pdb
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.csprojResolveAssemblyReference.cache
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\MainWindow.baml
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\App.g.cs
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF_MarkupCompile.cache
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.g.resources
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.Properties.Resources.resources
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.csproj.GenerateResource.Cache
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.exe
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.pdb
