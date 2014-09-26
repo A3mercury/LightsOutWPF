@@ -1,10 +1,9 @@
-﻿<Window x:Class="LightsOutWPF.MainWindow"
+﻿<Window x:Name="LightsOutWindow" x:Class="LightsOutWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="332" Background="White">
-    <Grid Background="#FFE2E2E2">
-        <Canvas Name="paintCanvas" Height="300" VerticalAlignment="Top" Margin="10,10,0,0" HorizontalAlignment="Left" Width="300" MouseDown="paintCanvas_MouseDown"/>
+        Title="MainWindow" Height="400" Width="340" Background="White">
+    <Canvas Name="paintCanvas" VerticalAlignment="Top" HorizontalAlignment="Left" MouseDown="paintCanvas_MouseDown" Background="Black" Margin="10,20,0,0" />
 
-    </Grid>
+
 </Window>
  

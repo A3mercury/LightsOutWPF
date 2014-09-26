@@ -20,10 +20,9 @@ namespace LightsOutWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int GRID_OFFSET = 25;
-        private static int GRID_LENGTH = 200;
+        private const int GRID_OFFSET = 10;
         private static int NUM_CELLS = 3;
-        private static int CELL_LENGTH = GRID_LENGTH / NUM_CELLS;
+        //private static int CELL_LENGTH = GRID_LENGTH / NUM_CELLS;
 
         private bool[,] grid;
         private Random rand;
@@ -38,6 +37,9 @@ namespace LightsOutWPF
 
             grid = new bool[NUM_CELLS, NUM_CELLS];
 
+            paintCanvas.Width = 300;
+            paintCanvas.Height = paintCanvas.Width;
+
             // turn entire grid on
             for (int r = 0; r < NUM_CELLS; r++)
             {
@@ -45,20 +47,16 @@ namespace LightsOutWPF
                 {
                     grid[r, c] = true;
                     
-                    //rect.Fill = Brushes.White;
-                    rect.Width = 100;
+                    rect.Width = paintCanvas.Width * 33.33 / 100;
                     rect.Height = rect.Width;
-                    //rect.Stroke = Brushes.Black;
 
-                    Canvas.SetTop(rect, rect.Width * c);
-                    Canvas.SetLeft(rect, rect.Height * r);
+                    Canvas.SetTop(rect, rect.Width * r);
+                    Canvas.SetLeft(rect, rect.Height * c);
                     paintCanvas.Children.Add(rect);
 
                     rect = new Rectangle();
                 }
             }
-
-            //grid[0, 0] = !grid[0, 0];
 
             this.DrawGrid();
         }
@@ -93,14 +91,9 @@ namespace LightsOutWPF
 
         private void paintCanvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // Make sure click was inside the grid
-            if ((int)e.GetPosition(rect).X < GRID_OFFSET || (int)e.GetPosition(rect).X > CELL_LENGTH * NUM_CELLS + GRID_OFFSET ||
-               (int)e.GetPosition(rect).Y < GRID_OFFSET || (int)e.GetPosition(rect).Y > CELL_LENGTH * NUM_CELLS + GRID_OFFSET)
-                return;
-
             // Find row, col of mouse press
-            int r = ((int)e.GetPosition(rect).Y - GRID_OFFSET) / CELL_LENGTH;
-            int c = ((int)e.GetPosition(rect).X - GRID_OFFSET) / CELL_LENGTH;
+            int r = ((int)e.GetPosition(paintCanvas).Y) / (int)(paintCanvas.Width / NUM_CELLS);
+            int c = ((int)e.GetPosition(paintCanvas).X) / (int)(paintCanvas.Width / NUM_CELLS);
 
             // Invert selected box and all surrounding boxes
             for (int i = r - 1; i <= r + 1; i++)
@@ -108,7 +101,6 @@ namespace LightsOutWPF
                     if (i >= 0 && i < NUM_CELLS && j >= 0 && j < NUM_CELLS)
                         grid[i, j] = !grid[i, j]; 
 
-            // Redraw grid
             this.DrawGrid();
         }
     }
