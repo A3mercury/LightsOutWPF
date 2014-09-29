@@ -12,3 +12,5 @@ C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debu
 C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.csproj.GenerateResource.Cache
 C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.exe
 C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\LightsOutWPF.pdb
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\About.baml
+C:\Users\Mercury\Documents\Repos\LightsOutWPF\LightsOutWPF\LightsOutWPF\obj\Debug\About.g.cs

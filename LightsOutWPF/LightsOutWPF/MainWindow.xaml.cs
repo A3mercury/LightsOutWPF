@@ -32,13 +32,15 @@ namespace LightsOutWPF
         public MainWindow()
         {
             InitializeComponent();
+            
 
             rand = new Random();
 
             grid = new bool[NUM_CELLS, NUM_CELLS];
 
-            paintCanvas.Width = 300;
+            paintCanvas.Width = LightsOutWindow.Width - 35;
             paintCanvas.Height = paintCanvas.Width;
+            Menu.Width = LightsOutWindow.Width - 15;
 
             // turn entire grid on
             for (int r = 0; r < NUM_CELLS; r++)
@@ -102,6 +104,43 @@ namespace LightsOutWPF
                         grid[i, j] = !grid[i, j]; 
 
             this.DrawGrid();
+
+            if(PlayerWon())
+            {
+                MessageBox.Show(this, "Congradulations! You've won!", "Lights Out!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+        }
+
+        private bool PlayerWon()
+        {
+            for (int r = 0; r < NUM_CELLS; r++)
+                for (int c = 0; c < NUM_CELLS; c++)
+                    if (grid[r, c])
+                        return false;
+
+            return true;
+        }
+
+        private void newCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Fill grid with either white or black
+            for (int r = 0; r < NUM_CELLS; r++)
+                for (int c = 0; c < NUM_CELLS; c++)
+                    grid[r, c] = rand.Next(2) == 1;
+
+            this.DrawGrid();
+        }
+        
+        private void closeCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            About aboutBox = new About();
+            aboutBox.Show();
         }
     }
 }
